@@ -1,4 +1,23 @@
 ## For Linux Ubuntu 20.04
+
+### Way 1
+
+sudo ubuntu-drivers list
+
+sudo ubuntu-drivers install nvidia:525
+
+sudo ubuntu-drivers install --gpgpu
+
+sudo ubuntu-drivers install --gpgpu nvidia:525-server
+
+### Reference: https://help.ubuntu.com/community/NvidiaDriversInstallation
+
+
+##################################################################################
+
+
+### Way 2
+
 # 根据显卡型号3090，到官网下载驱动：NVIDIA-Linux-x86_64-xxx.xx.run
 ## 1. 禁用nouveau
 ## 2. 打开终端，输入：
