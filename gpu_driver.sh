@@ -1,3 +1,9 @@
+## NVidia GPU Driver Should Have Been Installed When Installing the System
+## Just Remember to select 'Autonomatically Install Required Drivers' On Installing the System
+###############################################################################################
+###############################################################################################
+
+
 ## For Linux Ubuntu 20.04
 
 ### Way 1
