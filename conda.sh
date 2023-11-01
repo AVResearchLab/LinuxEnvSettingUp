@@ -23,3 +23,6 @@ conda install numpy #install some packages on this vr-environment
 
 
 # Reference: https://docs.conda.io/projects/conda/en/latest/commands.html
+
+##############################################################################
+#If you want to uninstall or specify other path after the installation, find the conda related paths inside the `~/.bashrc` file, edit them to the correct path or delete them if you uninstalled Anaconda.
