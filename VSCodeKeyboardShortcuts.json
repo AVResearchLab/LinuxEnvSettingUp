@@ -1,4 +1,6 @@
 // Place your key bindings in this file to override the defaults
+// Try to manually set some keyboard shortcuts like `navigate back` -> `Alt+LeftArrow`, etc
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "ctrl+shift+alt+a",
@@ -117,5 +119,15 @@
     {
         "key": "ctrl+shift+o",
         "command": "-ftp.open"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
     }
 ]
