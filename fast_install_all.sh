@@ -1,3 +1,9 @@
+#!/bin/bash
+
+if [[ $# -eq 0 ]]; then
+  echo "No '-y' argument provided, escaping Ubuntu-dependant tools."
+fi
+
 # Set Network Connection
 
 # Log onto LivePatch 
@@ -24,6 +30,7 @@ sudo apt install -y golang
 sudo apt install -y python
 sudo apt install -y pip
 sudo apt install -y lua5.3
+sudo apt install -y docker
 sudo apt install -y docker.io
 sudo apt install -y geany
 sudo apt install -y meld
@@ -50,26 +57,6 @@ sudo aptitude install -y libopencv-dev python3-opencv
 python3 -c "import cv2; print(cv2.__version__)"
 sudo apt-get install -y libomp5
 
-# LateX Related Tools
-sudo apt install -y evince
-sudo apt install -y texlive-latex-extra
-sudo apt install -y gedit-latex-plugin
-sudo apt install -y lyx
-sudo apt install -y latexila
-sudo apt install -y kile
-sudo apt install -y texstudio
-sudo apt install -y texmaker
-sudo apt install -y gummi
-
-# Gnome --> !!!!!! Only for Ubuntu !!!!!!
-sudo apt-get install gnome-shell
-sudo apt-get install ubuntu-gnome-desktop
-sudo apt-get install unity-tweak-tool
-sudo apt-get install gnome-tweak-tool
-sudo apt-get install gnome-shell-extension-dash-to-panel
-sudo apt install gnome-shell=3.36.4-1ubuntu1~20.04.2 gnome-shell-common=3.36.4-1ubuntu1~20.04.2 gnome-shell-extension-prefs=3.36.4-1ubuntu1~20.04.2
-gnome-tweaks
-
 # File Searching Tool
 sudo apt install fzf
 
@@ -77,8 +64,6 @@ sudo apt install fzf
 sudo apt install -y openssh-server
 service sshd restart
 
-# Remove games
-sudo apt remove -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku
 
 # NPM Global Packages
 sudo npm install -g servez
@@ -94,6 +79,32 @@ git config --global user.name "Ezharjan"
 # Case Ignorance
 echo "bind 'set completion-ignore-case on'" >> ~/.bashrc
 source ~/.bashrc
+
+# Tools for Ubuntu
+if [[ $1 == "-y" ]]; then
+  # LateX Related Tools
+  sudo apt install -y evince
+  sudo apt install -y texlive-latex-extra
+  sudo apt install -y gedit-latex-plugin
+  sudo apt install -y lyx
+  sudo apt install -y latexila
+  sudo apt install -y kile
+  sudo apt install -y texstudio
+  sudo apt install -y texmaker
+  sudo apt install -y gummi
+
+  # Gnome --> !!!!!! Only for Ubuntu !!!!!!
+  sudo apt-get install gnome-shell
+  sudo apt-get install ubuntu-gnome-desktop
+  sudo apt-get install unity-tweak-tool
+  sudo apt-get install gnome-tweak-tool
+  sudo apt-get install gnome-shell-extension-dash-to-panel
+  sudo apt install gnome-shell=3.36.4-1ubuntu1~20.04.2 gnome-shell-common=3.36.4-1ubuntu1~20.04.2 gnome-shell-extension-prefs=3.36.4-1ubuntu1~20.04.2
+  gnome-tweaks
+  
+  # Remove games
+  sudo apt remove -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku
+fi
 
 # GRUB Windows First for Dual System: see "./set_win_1st.sh"
 
