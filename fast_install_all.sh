@@ -61,7 +61,7 @@ sudo apt install -y texstudio
 sudo apt install -y texmaker
 sudo apt install -y gummi
 
-# Gnome
+# Gnome --> !!!!!! Only for Ubuntu !!!!!!
 sudo apt-get install gnome-shell
 sudo apt-get install ubuntu-gnome-desktop
 sudo apt-get install unity-tweak-tool
