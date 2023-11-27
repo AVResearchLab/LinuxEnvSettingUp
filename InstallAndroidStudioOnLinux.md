@@ -12,5 +12,8 @@ cd /use/local/android-studio/bin/
 ./studio.sh  # this will show you the GUI for installation, click next all the way to install it
 ```
 
-5. More detailed ways of installation can be found on [Official Websites Installation Guide Page](https://developer.android.com/studio/install).
+5. You can start Android Studio via running `sh /usr/local/android-studio/bin/studio.sh` next time.
+
+
+6. More detailed ways of installation can be found on [Official Websites Installation Guide Page](https://developer.android.com/studio/install).
 
