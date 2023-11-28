@@ -14,13 +14,15 @@ sudo apt --purge remove "cuda*"
 sudo apt --purge remove "nvidia*"
 sudo rm -rf /usr/local/cuda*
 sudo apt-get autoremove && sudo apt-get autoclean
-# reboot
+# reboot manually -- > shutdown now and restart!
 
 # DO NOT USE DEFAULT NVIDIA DRIVERS LISTED IN COMMANDLINE, MANUALLY DOWNLOAD IT FROM THE SITE YOUR SELF AND INSTALL!
 # Install Nvidia drivers manually downloaded from "https://www.nvidia.com/download/driverResults.aspx/213194/en-us/"
 # eg: ./NVIDIA-Linux-x86_64-535.129.03.run
 
 # Install the downloaded CUDA with *.run file from "https://developer.nvidia.com/cuda-downloads?target_os=Linux"
+# or run:
+sudo apt install nvidia-cuda-toolkit
 
 # reboot, then check to see if NVidia is properly installed
 # check if nvcc is properly installed
