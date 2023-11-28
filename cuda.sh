@@ -37,3 +37,9 @@ nvcc --version  # this should output the same version you installed based on the
 # See GPU information: 
 lspci | grep -i vga
 # Search the Device Number from: https://admin.pci-ids.ucw.cz/mods/PC/10de?action=help?help=pci to see the GPU version information
+
+# Common Issues:
+# DO NOT INSTALL CUDA DIRECTLY USING INNER COMMAND ("sudo apt install nvidia-cuda-toolkit")!!!
+# Installing via `sudo apt install nvidia-cuda-toolkit` will cause `Failed to initialize NVML: Driver/library version mismatch`!!!
+# Manually download and install CUDA with the specified version displayed by `nvidia-smi` from official site!!!
+# If you get error of `Failed to initialize NVML: Driver/library version mismatch` after `nvidia-smi`, remove cuda-toolkit then manual download and install it!
