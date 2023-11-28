@@ -6,10 +6,6 @@ nvidia-smi
 # Check CUDA Installation
 nvcc --version
 
-# Install all the ubuntu drivers
-sudo ubuntu-drivers autoinstall
-sudo ubuntu-drivers install
-
 
 # Note that the NVidia Driver and its CUDA version can be higher, as you may output higher driver version like 525 with cuda 12.0.
 # But it doesn't matter for you to install specific cuda version inside conda environment using the last line of code in this script.
