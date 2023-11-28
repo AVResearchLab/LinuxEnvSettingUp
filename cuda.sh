@@ -6,6 +6,10 @@ nvidia-smi
 # Check CUDA Installation
 nvcc --version
 
+# Install all the ubuntu drivers
+sudo ubuntu-drivers autoinstall
+sudo ubuntu-drivers install
+
 
 # Note that the NVidia Driver and its CUDA version can be higher, as you may output higher driver version like 525 with cuda 12.0.
 # But it doesn't matter for you to install specific cuda version inside conda environment using the last line of code in this script.
@@ -16,10 +20,7 @@ sudo rm -rf /usr/local/cuda*
 sudo apt-get autoremove && sudo apt-get autoclean
 # reboot
 
-# Install all the ubuntu drivers after removing some broken packages
-sudo ubuntu-drivers autoinstall
-sudo ubuntu-drivers install
-
+# DO NOT USE DEFAULT NVIDIA DRIVERS LISTED IN COMMANDLINE, MANUALLY DOWNLOAD IT FROM THE SITE YOUR SELF AND INSTALL!
 # Install Nvidia drivers manually downloaded from "https://www.nvidia.com/download/driverResults.aspx/213194/en-us/"
 # eg: ./NVIDIA-Linux-x86_64-535.129.03.run
 
