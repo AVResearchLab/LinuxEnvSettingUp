@@ -15,7 +15,7 @@
 # deb-src http://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
 # deb-src http://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 # deb-src http://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-# sup apt update
+# sudo apt update
 
 
 #Step 2: Install ROS
