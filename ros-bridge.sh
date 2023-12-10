@@ -7,6 +7,11 @@ source /opt/ros/noetic/setup.bash
 
 cd catkin_ws
 rosdep update
+# If rosdep command is not found:
+sudo pip install -U rosdep
+sudo rosdep init
+rosdep update
+# endIf
 rosdep install --from-paths src --ignore-src -r
 
 pip install rospkg
