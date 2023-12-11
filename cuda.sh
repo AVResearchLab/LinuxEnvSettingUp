@@ -1,3 +1,5 @@
+# Install in Conda virtual environment, visit: https://anaconda.org/nvidia/cuda-toolkit
+
 # NVidia Driver should be installed at first automatically while carefully installing the system at the start point
 # Check NVidia Driver Installation
 nvidia-smi
