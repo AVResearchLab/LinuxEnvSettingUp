@@ -14,8 +14,6 @@ sudo apt install -y lua5.3
 sudo apt install -y docker.io
 sudo apt install -y geany
 sudo apt install -y meld
-sudo apt install -y nodejs
-sudo apt install -y npm
 sudo apt install -y baobab
 sudo apt install -y ffmpeg
 sudo apt install -y mlocate
@@ -68,12 +66,6 @@ sudo apt install -y gummi
 #pdflatex hello-world.tex #compile the tex file created above
 #evince hello-world.pdf #view the compiled file in evince
 
-
-# NPM Global Packages
-sudo npm install -g servez
-sudo npm install -g cryptee
-sudo npm install -g splitee
-sudo npm install -g wikit  #search wikipidea by wikit TARGET
 
 # Other binaries
 # https://www.anaconda.com/products/distribution #conda
