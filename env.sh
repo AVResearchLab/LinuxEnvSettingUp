@@ -11,7 +11,7 @@ sudo apt install -y golang
 sudo apt install -y python
 sudo apt install -y pip
 sudo apt install -y lua5.3
-sudo apt install -y docker.io
+# sudo apt install -y docker.io  # this won't install the latest docker, try to install via docker.sh
 sudo apt install -y geany
 sudo apt install -y meld
 sudo apt install -y baobab

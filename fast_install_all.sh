@@ -30,8 +30,6 @@ sudo apt install -y golang
 sudo apt install -y python
 sudo apt install -y pip
 sudo apt install -y lua5.3
-sudo apt install -y docker
-sudo apt install -y docker.io
 sudo apt install -y geany
 sudo apt install -y meld
 sudo apt install -y nodejs
@@ -47,7 +45,6 @@ sudo apt install -y openssh-server
 sudo aptitude install -y clang
 sudo aptitude install -y g++
 sudo aptitude install -y build-essential
-sudo aptitude install -y cmake
 sudo apt-get install -y manpages-dev
 sudo apt install -y terminator
 sudo apt install -y python3-pip python-setuptools python3-setuptools
