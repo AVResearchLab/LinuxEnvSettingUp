@@ -18,3 +18,4 @@ sudo make install
 # open a new terminal
 cmake --version
 # this may output: cmake version 3.20.0 \n CMake suite maintained and supported by Kitware (kitware.com/cmake).
+# Warn: You might have to reinstall some packages like ROS if you ran steps 3~6
