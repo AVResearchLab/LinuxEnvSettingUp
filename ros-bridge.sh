@@ -1,4 +1,5 @@
 # Install at Python3.7 Environment in case of Incompatibility with CARLA!
+# PIP INSTALL  CARLA==0.9.13 IS COMPATIBIBLE WITH PYTHON3.7!
 #########################################################################
 # Install Carla-ROS-Bridge From Source
 mkdir -p ~/carla-ros-bridge/catkin_ws/src
@@ -30,11 +31,12 @@ sudo apt install python-pygame
 sudo apt-get install -y python3-catkin-tools
 sudo apt install -y python3-colcon-common-extensions
 
-#catkin build #this will cause failure build cauz pyEnv is not oriented, orient it with cmd below
+# catkin build # this may cause failure build cauz pyEnv is not oriented, if it happens, orient it with cmd below
 catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.8m
-# Or: python3.8m as follows
+# Or: python3.8m as follows  [or: /home/alex/anaconda3/envs/ros-bridge/lib/python3.7/]
 # catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.7m
 
+### Check the Env. ###
 #make sure the simulator CarlaUE4 is running with IP:XXX
 find carla_ros_bridge_with_example_ego_vehicle.launch # this may result in 'not found!', try using your `fzf` to find it! 
 ## It might be located at someplace like Eg:
