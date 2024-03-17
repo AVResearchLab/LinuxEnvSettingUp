@@ -1,7 +1,7 @@
 # Install Carla-ROS-Bridge From Source
 mkdir -p ~/carla-ros-bridge/catkin_ws/src
 
-cd ~/carla-ros-bridge
+cd ~/carla-ros-bridge  # or: ros-bridge
 git clone --recurse-submodules https://github.com/carla-simulator/ros-bridge.git catkin_ws/src/ros-bridge
 source /opt/ros/noetic/setup.bash
 
@@ -17,7 +17,7 @@ rosdep install --from-paths src --ignore-src -r
 pip install rospkg
 pip3 install rospkg
 pip2 install opencv-contrib-python 
-pip3 install opencv-contrib-python 
+pip3 install opencv-contrib-python
 pip install --user transforms3d
 pip3 install --user transforms3d
 sudo apt install python3-pygame
@@ -27,6 +27,8 @@ sudo apt install -y python3-colcon-common-extensions
 
 #catkin build #this will cause failure build cauz pyEnv is not oriented, orient it with cmd below
 catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.7m
+# Or: python3.8m as follows
+# catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.8m
 
 #make sure the simulator CarlaUE4 is running with IP:XXX
 find carla_ros_bridge_with_example_ego_vehicle.launch
