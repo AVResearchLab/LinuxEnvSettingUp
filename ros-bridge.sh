@@ -15,10 +15,13 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r
 
 pip install rospkg
+pip2 install rospkg
 pip3 install rospkg
-pip2 install opencv-contrib-python 
+pip install opencv-contrib-python 
+pip2 install opencv-contrib-python
 pip3 install opencv-contrib-python
 pip install --user transforms3d
+pip2 install --user transforms3d
 pip3 install --user transforms3d
 sudo apt install python3-pygame
 sudo apt install python-pygame
@@ -31,14 +34,16 @@ catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/incl
 # catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.8m
 
 #make sure the simulator CarlaUE4 is running with IP:XXX
-find carla_ros_bridge_with_example_ego_vehicle.launch
+find carla_ros_bridge_with_example_ego_vehicle.launch # this may result in 'not found!', try using your `fzf` to find it! 
+## It might be located at someplace like Eg: home/alex/carla-ros-bridge/catkin_ws/src/ros-bridge/carla_ros_bridge/launch/carla_ros_bridge_with_example_ego_vehicle.launch
 cat RESULT_DIR_OF_ABOVE 
 #eg.:cd /home/alexander/carla-ros-bridge/catkin_ws/src/ros-bridge/carla_ros_bridge/launch
 #eg.:cat carla_ros_bridge_with_example_ego_vehicle.launch
 #You will see the inner side of the launch file, and view the parameters you want to change while launching
 #Refer:https://blog.csdn.net/wohu1104/article/details/125407026
 
-# source ~/carla-ros-bridge/catkin_ws/devel/setup.bash # Try this command if you want to run the car via ROS
+conda activate CARLA_SPECIFIED_ENV # make sure your python environment has carla package installed!
+# source ~/carla-ros-bridge/catkin_ws/devel/setup.bash # Try this command this is a must if you want to run the car via ROS!
 #If you are running the CarlaUE4 locahost, directly run the command below
 #roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
 #If error exists on excuting this command syaing missing some modules, try install the modules through pip(3)
