@@ -1,3 +1,5 @@
+# Install at Python3.7 Environment in case of Incompatibility with CARLA!
+#########################################################################
 # Install Carla-ROS-Bridge From Source
 mkdir -p ~/carla-ros-bridge/catkin_ws/src
 
@@ -15,27 +17,28 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r
 
 pip install rospkg
-pip2 install rospkg
-pip3 install rospkg
+# pip2 install rospkg
+# pip3 install rospkg
 pip install opencv-contrib-python 
-pip2 install opencv-contrib-python
-pip3 install opencv-contrib-python
+# pip2 install opencv-contrib-python
+# pip3 install opencv-contrib-python
 pip install --user transforms3d
-pip2 install --user transforms3d
-pip3 install --user transforms3d
+# pip2 install --user transforms3d
+# pip3 install --user transforms3d
 sudo apt install python3-pygame
 sudo apt install python-pygame
 sudo apt-get install -y python3-catkin-tools
 sudo apt install -y python3-colcon-common-extensions
 
 #catkin build #this will cause failure build cauz pyEnv is not oriented, orient it with cmd below
-catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.7m
+catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.8m
 # Or: python3.8m as follows
-# catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.8m
+# catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.7m
 
 #make sure the simulator CarlaUE4 is running with IP:XXX
 find carla_ros_bridge_with_example_ego_vehicle.launch # this may result in 'not found!', try using your `fzf` to find it! 
-## It might be located at someplace like Eg: home/alex/carla-ros-bridge/catkin_ws/src/ros-bridge/carla_ros_bridge/launch/carla_ros_bridge_with_example_ego_vehicle.launch
+## It might be located at someplace like Eg:
+# cd /home/alex/carla-ros-bridge/catkin_ws/src/ros-bridge/carla_ros_bridge/launch/carla_ros_bridge_with_example_ego_vehicle.launch
 cat RESULT_DIR_OF_ABOVE 
 #eg.:cd /home/alexander/carla-ros-bridge/catkin_ws/src/ros-bridge/carla_ros_bridge/launch
 #eg.:cat carla_ros_bridge_with_example_ego_vehicle.launch
@@ -45,7 +48,7 @@ cat RESULT_DIR_OF_ABOVE
 conda activate CARLA_SPECIFIED_ENV # make sure your python environment has carla package installed!
 # source ~/carla-ros-bridge/catkin_ws/devel/setup.bash # Try this command this is a must if you want to run the car via ROS!
 #If you are running the CarlaUE4 locahost, directly run the command below
-#roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
+# roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
 #If error exists on excuting this command syaing missing some modules, try install the modules through pip(3)
 #Otherwise, set the parameter like the example shown below:
 roslaunch carla_ros_bridge carla_ros_bridge.launch host:=127.0.0.1
