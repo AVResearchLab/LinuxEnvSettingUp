@@ -41,7 +41,7 @@ cat RESULT_DIR_OF_ABOVE
 #roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
 #If error exists on excuting this command syaing missing some modules, try install the modules through pip(3)
 #Otherwise, set the parameter like the example shown below:
-roslaunch carla_ros_bridge carla_ros_bridge.launch host:=172.19.240.1
+roslaunch carla_ros_bridge carla_ros_bridge.launch host:=127.0.0.1
 #Try H to see more while driving the car
 
 
