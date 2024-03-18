@@ -48,7 +48,7 @@ cat RESULT_DIR_OF_ABOVE
 #Refer:https://blog.csdn.net/wohu1104/article/details/125407026
 
 conda activate CARLA_SPECIFIED_ENV # make sure your python environment has carla package installed!
-# source ~/carla-ros-bridge/catkin_ws/devel/setup.bash # Try this command this is a must if you want to run the car via ROS!
+source ~/carla-ros-bridge/catkin_ws/devel/setup.bash # This is a must if you want to run the car via ROS!
 #If you are running the CarlaUE4 locahost, directly run the command below
 # roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
 #If error exists on excuting this command syaing missing some modules, try install the modules through pip(3)
