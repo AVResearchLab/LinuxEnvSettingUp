@@ -33,7 +33,7 @@ sudo apt install -y python3-colcon-common-extensions
 
 # catkin build # this may cause failure build cauz pyEnv is not oriented, if it happens, orient it with cmd below
 catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.8m
-# Or: python3.8m as follows  [or: /home/alex/anaconda3/envs/ros-bridge/lib/python3.7/]
+# Or: python3.8m as follows
 # catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.7m
 
 ### Check the Env. ###
