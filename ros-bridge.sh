@@ -50,10 +50,12 @@ cat RESULT_DIR_OF_ABOVE
 conda activate CARLA_SPECIFIED_ENV # make sure your python environment has carla package installed!
 source ~/carla-ros-bridge/catkin_ws/devel/setup.bash # This is a must if you want to run the car via ROS!
 #If you are running the CarlaUE4 locahost, directly run the command below
-# roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
+roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
 #If error exists on excuting this command syaing missing some modules, try install the modules through pip(3)
 #Otherwise, set the parameter like the example shown below:
 roslaunch carla_ros_bridge carla_ros_bridge.launch host:=127.0.0.1
+#Or, most importantly, try `conda install libffi==3.3` if it outputs the error of "ImportError: /lib/x86_64-linux-gnu/libp11-kit.so.0: undefined symbol: ffi_type_pointer, version LIBFFI_BASE_7.0"  [Ref:https://blog.csdn.net/OrdinaryMatthew/article/details/131439895]
+#conda install libffi==3.3
 #Try H to see more while driving the car
 
 
