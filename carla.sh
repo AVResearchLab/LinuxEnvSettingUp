@@ -38,3 +38,8 @@ cd /opt/carla-simulator/
 
 
 # Referenced From: https://carla.readthedocs.io/en/latest/start_quickstart/
+
+
+# Remove PPAs and Keys
+# Ref: https://linuxier.com/how-to-remove-apt-repository-in-ubuntu/
+# Ref: https://askubuntu.com/questions/604988/how-to-remove-a-apt-key-which-i-have-added
