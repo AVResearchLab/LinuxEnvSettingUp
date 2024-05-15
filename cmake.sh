@@ -1,3 +1,4 @@
+# Use: `sudo apt install cmake` for the Ubuntu versions above 20.04
 echo "Preparing to install CMAKE-3.20.0 for Ubuntu 20.04" # Reference: https://vpsie.com/knowledge-base/how-to-install-cmake-on-ubuntu-20-04/
 # Remove all the previously installed old versions first if needed
 sudo apt remove --purge --auto-remove cmake

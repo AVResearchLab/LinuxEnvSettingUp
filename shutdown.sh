@@ -1,3 +1,4 @@
+# do not use this too much!
 trash-empty
 rm -rf ~/.local/share/Trash/*
 rm -rf ~/.thumbs/*
