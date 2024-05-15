@@ -1,11 +1,14 @@
 ### Some packages might not be correctly installed if the node version is too low. ###
 
+# Optional! (Start)
 # Make sure to remove all the mistakenly installed Node&NPM-related packages
 sudo apt autoremove --purge nodejs
 sudo apt autoremove --purge npm
 sudo apt autoremove
 sudo apt autoclean
 sudo rm -rf /usr/local/lib/node_modules/npm
+# Optional! (End)
+
 
 # download and install Node.js with its affiliated NPM toolkit
 cd ~/Downloads
