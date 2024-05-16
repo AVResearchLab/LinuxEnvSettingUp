@@ -4,7 +4,7 @@ conda activate carla
 conda install numpy -y  # install some packages on this vr-environment
 nvidia-smi
 nvcc --version
-conda install -c "nvidia/label/cuda-11.8.0" cuda-nvcc -y
+conda install -c "nvidia/label/cuda-11.8.0" cuda-nvcc -y # for more versions, refer: https://anaconda.org/nvidia/cuda-nvcc
 nvcc --version  # this should output the same version you installed based on the commands above
 
 

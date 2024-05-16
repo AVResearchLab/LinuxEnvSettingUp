@@ -28,7 +28,7 @@ sudo apt-get autoremove && sudo apt-get autoclean
 # check if nvcc is properly installed
 # if not, use conda in your environment to install nvcc as follows:
 conda activate your_venv # remember to activate your virtual environment
-conda install -c "nvidia/label/cuda-11.8.0" cuda-nvcc -y
+conda install -c "nvidia/label/cuda-11.8.0" cuda-nvcc -y   # for more versions, refer: https://anaconda.org/nvidia/cuda-nvcc
 # then check again if nvcc is properly installed 
 nvcc --version  # this should output the same version you installed based on the commands above
 
