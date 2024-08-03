@@ -10,3 +10,5 @@ git config --local credential.helper store
 git config --local user.email "ezharjan@outlook.com"
 git config --local user.name "Ezharjan"
 
+# git pull --rebase origin master
+# https://medium.com/@rajlaxmii/git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them-75e97bd8abd2
